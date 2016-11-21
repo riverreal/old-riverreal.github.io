@@ -2,54 +2,208 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Bootstrap 3 Responsive Layout Example</title>
+<title>Riverreal Portfolio</title>
     <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
 <!-- Optional theme -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
+    
+<style>
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  line-height: 60px; /* Vertically center the text there */
+  background-color: #f5f5f5;
+}
+
+
+/* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+
+body > .container {
+  padding: 30px 15px 0;
+}
+
+.footer > .container {
+  padding-right: 15px;
+  padding-left: 15px;
+}  
+
+.footer {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  margin-top: 40px;
+  border-top: 1px solid #eee;
+}
+
+/* Main marketing message and sign up button */
+.jumbotron {
+  text-align: center;
+}
+.jumbotron .btn {
+  padding: 14px 24px;
+  font-size: 21px;
+}
+
+/* add .nav-justified, see: https://github.com/twbs/bootstrap/issues/18653 */
+.nav-justified {
+  width: 100%;
+}
+.nav-item {
+  float: none;
+}
+.nav-link {
+  width: 100%;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .nav-item {
+    display: table-cell;
+    width: 1%;
+  }
+  .nav-link {
+    margin-bottom: 0;
+  }
+}
+
+/* Customize the nav-justified links to be fill the entire space of the .navbar */
+
+.nav-justified {
+  background-color: #eee;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.nav-link {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin-bottom: 0;
+  font-weight: bold;
+  color: #777;
+  text-align: center;
+  background-color: #e5e5e5; /* Old browsers */
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#f5f5f5), to(#e5e5e5));
+  background-image: -webkit-linear-gradient(top, #f5f5f5 0%, #e5e5e5 100%);
+  background-image:      -o-linear-gradient(top, #f5f5f5 0%, #e5e5e5 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#f5f5f5),to(#e5e5e5));
+  background-image: -webkit-linear-gradient(top, #f5f5f5 0%,#e5e5e5 100%);
+  background-image:      -o-linear-gradient(top, #f5f5f5 0%,#e5e5e5 100%);
+  background-image:         linear-gradient(to bottom, #f5f5f5 0%,#e5e5e5 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5f5f5', endColorstr='#e5e5e5',GradientType=0 ); /* IE6-9 */
+  background-repeat: repeat-x; /* Repeat the gradient */
+  border-bottom: 1px solid #d5d5d5;
+}
+.nav-link.active,
+.nav-link.active:hover,
+.nav-link.active:focus {
+  background-color: #ddd;
+  background-image: none;
+  -webkit-box-shadow: inset 0 3px 7px rgba(0,0,0,.15);
+          box-shadow: inset 0 3px 7px rgba(0,0,0,.15);
+}
+.nav-item:first-child .nav-link {
+  border-radius: 5px 5px 0 0;
+}
+.nav-item:last-child .nav-link {
+  border-radius: 0 0 5px 5px;
+}
+
+@media (min-width: 768px) {
+  .nav-justified {
+    max-height: 52px;
+  }
+  .nav-link {
+    border-right: 1px solid #d5d5d5;
+    border-left: 1px solid #fff;
+  }
+  .nav-item:first-child .nav-link {
+    border-left: 0;
+    border-radius: 5px 0 0 5px;
+  }
+  .nav-item:last-child .nav-link {
+    border-right: 0;
+    border-radius: 0 5px 5px 0;
+  }
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+  /* Remove the padding we set earlier */
+  .masthead,
+  .marketing,
+  .footer {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+    
+</style>
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 </head>
 <body>
-    <nav id="myNavbar" class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbarCollapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">Rivero Yuichi Sato</a>
-            </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="navbarCollapse">
-                <ul class="nav navbar-nav">
-                    <li class="active"><a href="#" target="_blank">Home</a></li>
-                    <li><a href="#" target="_blank">About</a></li>
-                    <li><a href="#" target="_blank">Contact</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
     <div class="container">
+        <div class="masthead">
+            <nav>
+              <ul class="nav nav-justified">
+                <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">...</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+              </ul>
+            </nav>
+        </div>
+
         <div class="jumbotron">
-            <h1>Portfolio Website</h1>
-            <p>Placeholder</p>
+            <h1>Riverreal Portfolio</h1>
+            <p>My portfolio website.</p>
         </div>
-        
-        <hr>
         <div class="row">
-            <div class="col-sm-12">
-                <footer>
-                    <p>Copyright © 2016 Rivero Yuichi Sato. All Rights Reserved</p>
-                </footer>
-            </div>
-        </div>
+            <div class="col-xs-6 col-lg-6">
+                <h2>ThreeJS</h2>
+                <br>
+                <h4>BRIDS</h4>
+                <p>This is a simple ThreeJS 3d program, featuring flying birds in a sky.</p>
+                <p><a class="btn btn-primary" href="threejs/birds.html" role="button">RUN BIRDS</a></p>
+            </div><!--/span-->
+            <div class="col-xs-6 col-lg-6" >
+                <h2>Skull Engine</h2>
+                <p>This is a simple 2d engine using native javascript with Canvas.</p>
+                <br>
+                <h4>PONG Demo</h4>
+                
+                <p>A simple game. PONG using the Skull Engine. Simple collision detection and power up system.</p>
+                <p><a class="btn btn-primary" href="pong/index.html" role="button">RUN PONG</a></p>
+                <br>
+                <h4>Visual Novel Demo</h4>
+                <p>A piece of visual novel to demostrate the capabilities of the engine.</p>
+                <p><a class="btn btn-primary" href="vn/index.html" role="button">RUN VISUAL NOVEL</a></p>
+            </div><!--/span-->
+        </div><!--row -->
+        <hr>
+        
+        <footer class="footer">
+          <div class="container">
+            <span class="text-muted">Copyright © 2016 Rivero Yuichi Sato. All Rights Reserved</span>
+          </div>
+        </footer>
     </div>
 </body>
 </html>
